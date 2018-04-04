@@ -1,0 +1,377 @@
+\documentclass[twocolumn,11pt]{jarticle}
+
+\usepackage[dvipdfmx]{graphicx}
+\graphicspath{ {math-images5/} }
+\usepackage[dvipdfmx]{color}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{latexsym}
+%\usepackage{ascmac}
+\usepackage{fancyhdr}
+\usepackage{overpic}
+\usepackage[dvipdfmx,%
+ bookmarks=true,%
+ bookmarksnumbered=true,%
+ colorlinks=true,%
+ linkcolor=blue,%
+ setpagesize=false,%
+ pdftitle={数学の基礎訓練IV},%
+ pdfauthor={西井淳},%
+ pdfsubject={数学の基礎訓練IV},%
+ pdfkeywords={応用数学}]{hyperref}
+\usepackage{pxjahyper}%hyperrefの不具合対応
+\usepackage{makeidx} %索引
+\usepackage{mymath}
+\makeindex
+
+\geometry{body={178mm,242mm},columnsep=9mm}
+
+
+\begin{document}
+
+\pagestyle{empty}
+\twocolumn[
+\noindent
+\begin{center}
+{\Huge\gtfamily 数学の基礎訓練IV\\
+\LARGE 〜力学系入門〜}
+\end{center}
+\begin{flushright}
+\today\\\vspace{-0.4cm}
+\rule{\linewidth}{0.5pt}
+\end{flushright}
+{\small\tableofcontents}
+\rule{\linewidth}{0.5pt}
+\vspace{5mm}
+]
+% \newpage
+
+% \rule{0pt}{10cm}
+% \newpage
+
+\setcounter{page}{1}
+\pagestyle{fancy}
+
+\section{一変数の力学系}
+\subsection{基本}
+
+\nquestion
+微分方程式
+\begin{align}
+  \label{eq:logistic}
+  \dot{x}=(1-x)x
+\end{align}
+について以下の問に答えよ。
+
+\begin{enumerate}
+\item $\dot{x}=0$ を満たす$x$を求めよ。このような点を
+\bfindex[へいこうてん]{平衡点}
+(\nmindex{equilibrium point})と呼ぶ。
+\item 横軸に$x$, 縦軸に$\dot{x}$をとったときの式(\ref{eq:logistic})
+  のグラフをかけ。
+\item 
+  平衡点のうち，わずかな摂動で
+  離れる点を\bfindex[ふあんていてん]{不安定点}
+  (\nmindex{unstable point})もしくは 
+\bfindex[ゆうてん]{湧点}(\nmindex{})，
+  摂動があってももとに戻る点を\bfindex[あんていてん]{安定点}
+  (\nmindex{stable point})もしくは
+\bfindex[ちんてん]{沈点}(\nmindex{sink})と呼ぶ。
+  各平衡点の安定性を前問のグラフから判断せよ。
+\item 以上の結果を参考にして，解の軌跡を図示せよ。
+  (横軸に時間，縦軸に$x$をとったグラフをつくる) 
+\item $f(x)=(1-x)x$とおいたとき，平衡点における$f'(x)$を求めよ。
+  その符合と平衡点の性質の関連を考えよ
+\end{enumerate}
+
+\nquestion
+以下の各微分方程式における平衡点とその安定性，解の挙動を議論せよ。
+解を陽に求めることなく議論すること。
+\begin{enumerate}
+\item $\dot{x}=x$
+\item $\dot{x}=1-x$
+  % \item $\dot{x}=\sin x$
+\item $y'=y^2-3y+2$
+\end{enumerate}
+
+\subsection{Lyapunov関数}
+
+\subsection{最急降下法}
+微分可能な関数$V(x)$が唯一の最小値$x_0$を持つとする。
+以下の微分方程式にしたがう解$x$は時間とともに$x_0$に収束することを証明
+しなさい。
+\begin{align}
+  \dot{x}=-\epsilon\frac{d V}{d x}\notag
+\end{align}
+ここで、$\epsilon$は正の定数である。\\
+ヒント)$V$が時間とともに減少することを示す。
+
+\subsection{分岐}
+\question
+微分方程式
+\begin{align}
+  \label{eq:logistic-h}
+  \dot{x}=(1-x)x-h
+\end{align}
+について以下の問に答えよ。
+\begin{enumerate}
+\item $h$の値によって平衡点およびその安定性がどのように変わるかを議論
+  しなさい。
+  またその結果を，横軸を$h$, 縦軸を$x$にとったグラフに図示しなさい。
+\end{enumerate}
+
+\section{二変数の力学系}
+\nquestion
+微分方程式
+\begin{align}
+\dot{\vect{x}}&=A\vect{x},\quad
+\vect{x}=
+\begin{pmatrix}
+x\\y  
+\end{pmatrix}\label{eq:2D-dynamics}
+\end{align}
+の相図はどのようになるか。
+ 行列$A$が以下のように与えられる各場合について述べなさい。
+ \begin{enumerate}
+ \item $
+   \begin{pmatrix}
+     1 & 0\\
+     0 & 1
+   \end{pmatrix}$
+ \item $
+   \begin{pmatrix}
+     1 & 0\\
+     0 & -1
+   \end{pmatrix}$
+ \item $
+   \begin{pmatrix}
+     -1 & 0\\
+     0 & -1
+   \end{pmatrix}$
+ \item $
+   \begin{pmatrix}
+     0 & -1 \\
+     1 & 0
+   \end{pmatrix}$
+ \item $
+   \begin{pmatrix}
+     -1 & -1 \\
+     1 & -1
+   \end{pmatrix}$
+ \end{enumerate}
+
+\nquestion
+\begin{enumerate}
+\item 
+以下の行列を標準系にしなさい。
+\begin{enumerate}
+\item $
+  \begin{pmatrix}
+    -5 & 3 \\
+    3 & -5
+  \end{pmatrix}
+$%%$\lambda=-2,-8$
+\item 
+$
+  \begin{pmatrix}
+    1 & 0 \\
+    -1 & 3
+  \end{pmatrix}
+$%%$\lambda=1,3$
+\item $
+  \begin{pmatrix}
+    0 & 1 \\
+    -4 & 0
+  \end{pmatrix}
+$%%$\lambda=\pm 2i$
+\end{enumerate}
+\item 式(\ref{eq:2D-dynamics})の行列$A$が上記の各行列で与えられた場合
+  それぞれについて，相図を描きなさい。
+\end{enumerate}
+
+
+\section{位相振動子}
+
+\subsection{位相振動子のダイナミクス}
+\question
+微分方程式
+\begin{align}
+\label{eq:harm-osc}
+\dot{\vect{x}}&=A\vect{x},\quad
+\vect{x}=
+\begin{pmatrix}
+x\\y  
+\end{pmatrix},\quad
+A=
+\begin{pmatrix}
+0 & -\omega \\
+\omega & 0
+\end{pmatrix}
+\end{align}
+について以下の問に答えなさい．
+\begin{enumerate}
+\item $|\vect{x}|$が時間によらずに一定であることを証明せよ。
+\item 微分方程式(\ref{eq:harm-osc})の相図を描きなさい。(式(\ref{eq:harm-osc})
+  の解の振舞を図示しなさい)
+\item 微分方程式(\ref{eq:harm-osc})に対して、次式をみたすような位相
+  $\theta$を定義する。
+  \begin{align}
+    \cos\theta=\frac{x}{r},\quad
+    \sin\theta=\frac{y}{r},\quad
+    r=|\vect{x}|
+  \end{align}
+  $\theta$がどのような角度を表しているかを図で説明しなさい．
+\item $\theta$が以下の微分方程式にしたがって変化することを証明しなさい．
+  \begin{align}
+    \dot{\theta}=\omega
+  \end{align}
+\item 微分方程式(\ref{eq:harm-osc})が外乱を受けた場合のダイナミクス、
+  すなわち次式を考える。
+  \begin{align}
+    \label{eq:harm-osc-e}
+    \dot{\vect{x}}&=A\vect{x}+\vect{q}\\
+    \vect{q}&=
+    \begin{pmatrix}
+      q\\0
+    \end{pmatrix}
+  \end{align}
+  このダイナミクスは位相$\theta$を用いると次式のように書けること
+  を示しなさい．
+  \begin{align}
+    \label{eq:phase-osc}
+    \dot{\theta}=\omega-\frac{\sin\theta}{r}q
+  \end{align}
+  \comment
+  上式より、外乱による$r$の変化が無視できる程度であれば、
+  入力信号(外乱)が位相ダイナミクスに与える影響は、
+  振動子の内部状態による項$\sin\theta$と信号$q$の積によることがわかる。
+\item 外乱$q$が十分小さくかつ短時間与えられたとした場合について、
+   式(\ref{eq:harm-osc-e})を式(\ref{eq:phase-osc})のように表現できる
+   理由を図を描いて定性的に説明しなさい．
+ \item 外乱が$
+    \vect{p}=
+    \begin{pmatrix}
+      0 \\ p
+    \end{pmatrix}$
+    と与えられる場合には位相ダイナミクスはどのようになるだろう?
+\end{enumerate}
+
+\comment
+ある非線型振動子が外部入力信号$Q(t)\ll 1$を受け取るとき、
+その位相ダイナミクスはしばしば以下のように表現できる。
+\begin{align}
+  \dot{\theta}=\omega+\epsilon P(\theta)Q(t),\quad
+  P(\theta)=\sin(\theta+\psi)
+\end{align}
+ここで、$\epsilon\ll 1$, $\psi$は定数である。
+
+\subsection{位相振動子の同期}
+\question
+2つの振動子$A$, $B$の位相をそれぞれ$\theta$, $\tilde{\theta}$、
+固有周期をそれぞれ$\omega$、$\omega$とする。
+$B$は$A$から信号$Q(\tilde{\theta})=\cos(\theta-\psi)$を受け取っており、
+両者の位相ダイナミクスは以下のように与えられるとする。
+\begin{align}
+  \begin{cases}
+  \dot{\theta}&=\omega+\epsilon P(\theta)Q(\tilde{\theta})\\
+  \dot{\tilde{\theta}}&=\Omega
+  \end{cases},
+  \quad P(\theta)=\sin\theta
+\end{align}
+\begin{enumerate}
+\item  $\phi=\tilde{\theta}-\theta$とおく。$\phi$のダイナミクスを表す式を書きなさい。
+\item $\tilde{\theta}+\theta$の時間変化が
+  $\phi=\tilde{\theta}-\theta$の時間変化より速いことをグラフを描いて説
+  明しなさい．
+\item $\Omega=\omega$のとき、時間とともに2つの振動子の位相差の(数周期
+  程度にわたる)平均値が0になる条件を求めなさい．また、その条件をグラフ
+  を用いて説明しなさい．
+
+  \comment 注目している項(ここでは位相差$\phi$)の時間変化を議論する際、
+  その項の時間変化よりも十分早い振動的な成分(高周波成分)を無視して議論
+  を行う方法を\textbf{時間平均化法}(time averaging method)という。
+\item $\Omega\ne\omega$のとき、時間とともに2つの振動子の位相差の(数周期
+  程度にわたる)平均値が一定値になる条件を求めなさい．また、その条件を
+  グラフを用いて説明しなさい．
+\end{enumerate}
+
+
+\question
+神経振動子が固有周期$\Omega$をもつ物理系と相互作用をし、
+それぞれの位相を$\theta$, $\tilde{\theta}$で表す。
+物理系からの信号$Q(\tilde{\theta})$が神経振動子を構成するいくつかの神
+経細胞に影響を与えるとし、また神経振動子は物理系に信号$Q(\theta)$を送っ
+ているとする。このとき、
+神経振動子と物理系の位相ダイナミクスは、いずれも前問と同様に近似的に次
+のように表すことができるとする。
+\begin{align}
+  \begin{cases}
+  \dot{\theta}
+  &=\omega+w_1P(\theta)Q(\tilde{\theta})+w_2P(\theta-\psi)Q(\tilde{\theta})\\
+  \dot{\tilde{\theta}}&=\Omega+\epsilon P(\tilde{\theta})Q(\theta)
+  \end{cases}
+\end{align}
+\begin{enumerate}
+\item 以下では，$P(\theta)=\sin\theta$, $Q(\theta)=\cos\theta$とし，
+  $\phi=\tilde{\theta}-\theta$とおく。
+ $\phi$のダイナミクスを表す式を書きなさい。
+  \item $\Omega=\omega$の場合について以下の問に答えなさい．
+  \begin{enumerate}
+  \item $w_1=\epsilon$, $w_2=0$のとき，$\phi$の安定点
+    を求めなさい．
+  \item $w_1=0$, $w_2=\epsilon$, $\psi=\frac{\pi}{4}$
+    のとき，$\phi$の安定点を求めなさい．
+  \item $w_1$, $w_2$を適切に選ぶことによって，CPGと物理系の間の位相差
+    $\phi$を任意の値で安定化できることを示しなさい．
+  \end{enumerate}
+\item $\Omega\ne\omega$の場合以下の学習則で$\omega=\Omega$となりうるこ
+  とを証明しなさい．
+  \begin{align}
+    \dot{\omega}=\varepsilon\{w_1P(\theta)Q(\tilde{\theta})+
+  w_2P(\theta-\psi)Q(\tilde{\theta})\}
+  \end{align}
+\end{enumerate}
+
+\newpage
+\appendix
+\section{位相振動子のダイナミクスの導出}
+  \begin{align}
+    \frac{d}{dt}
+    \begin{pmatrix}
+      x\\y  
+    \end{pmatrix}
+    &=
+    \begin{pmatrix}
+      0 & -\omega \\
+      \omega & 0
+    \end{pmatrix}
+    \begin{pmatrix}
+      x\\y  
+    \end{pmatrix}
+    +
+    \begin{pmatrix}
+      q\\0
+    \end{pmatrix}
+  \end{align}
+\begin{align}
+\cos\theta&=\frac{x}{r}\notag\\
+-\dot{\theta}\sin\theta&=\frac{\dot{x}}{r}-\frac{x}{r^2}\dot{r}
+\end{align}
+ここで
+\begin{align}
+  r&=\sqrt{x^2+y^2}\notag\\
+  \dot{r}&=\frac{2x\dot{x}+2y\dot{y}}{2r}\notag\\
+  &=\frac{1}{r}{x(-y\omega+q)+y(x\omega)}\notag\\
+  &=\frac{x}{r}q
+\end{align}
+を代入すると
+\begin{align}
+-\dot{\theta}\sin\theta&=\frac{-y\omega+q}{r}-\frac{x}{r^2}\left(\frac{x}{r}q\right)\notag\\
+-\dot{\theta}\frac{y}{r}&=\frac{-y}{r}\omega+\frac{q}{r}\left(1-\frac{x^2}{r^2}\right)\notag\\
+\dot{\theta}&=\omega-\frac{q}{y}\left(\frac{r^2-x^2}{r^2}\right)\notag\\
+&=\omega-\frac{q}{y}\left(\frac{y^2}{r^2}\right)\notag\\
+&=\omega-\frac{y}{r^2}q\notag\\
+&=\omega-\frac{\sin\theta}{r}q
+\end{align}
+
+\end{document}

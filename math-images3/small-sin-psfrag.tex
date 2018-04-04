@@ -1,0 +1,15 @@
+\documentclass{jarticle}
+\usepackage{psfrag}
+\pagestyle{empty}
+
+\begin{document}
+%%dvips(k) -Ppdf -E いったん EPS にしてから，それをメインの LaTeX ファイルに挿入
+\psfragscanon
+\psfrag{s}[][]{$\theta$}
+\psfrag{srad}[][]{$\theta$ [rad]}
+\psfrag{1}[][]{$1$}
+\psfrag{x}[][]{$x$}
+\psfrag{y}[][]{$y$}
+\resizebox{5cm}{!}{\includegraphics{small-sin.eps}}
+
+\end{document}

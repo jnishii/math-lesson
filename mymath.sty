@@ -1,0 +1,114 @@
+\ProvidesPackage{mymath}
+        [2013/05/13 v.2.0 macros for mymath]
+
+\newif\ifans
+\ansfalse
+\DeclareOption{answer}{\anstrue}
+\DeclareOption{noanswer}{\ansfalse}
+%\ProcessOptions
+
+\newif\ifextra
+\extrafalse
+\DeclareOption{extra}{\extratrue}
+\DeclareOption{noextra}{\extrafalse}
+\ProcessOptions
+
+\newenvironment{extra}{
+\ifextra
+\noindent
+\textbf{[Extra =============== ]}\\
+}{
+\textbf{[================ Extra]}\\
+\fi
+}
+
+% enumerate環境のlabel-ref表示 (2階層目の表示の時(1a)と1階層目の数字は入れず，(a)にする)
+\renewcommand{\p@enumii}{}
+
+%%タイトル「目次」を消す
+\renewcommand{\tableofcontents}{%
+\@starttoc{toc}%
+}
+
+\def\labelenumi{(\arabic{enumi})}
+\def\labelenumii{(\alph{enumii})}
+\def\labelenumiii{(\roman{enumiii})}
+\newcounter{qnum}[subsection]
+\setcounter{qnum}{0}
+\newcounter{qex}[subsection]
+\setcounter{qex}{0}
+
+\newcounter{qboxnum}[subsection]
+\def\qbox{\stepcounter{qboxnum}\fbox{\quad(\theqboxnum)\quad}}
+\def\sqbox{\stepcounter{qboxnum}\fbox{\;(\theqboxnum)\;}}
+\def\nullbox#1{\fbox{\rule{#1}{0cm}\rule[-1mm]{0cm}{0.4cm}}}
+
+\def\vqspace{\vspace{1ex}}
+\def\example{\vqspace\noindent\textbf{[例題]}~}
+\def\exanswer{\vqspace\noindent\textbf{答)}~}
+\def\question{\vqspace\noindent\textbf{問}~}
+\def\nquestion{\stepcounter{qnum}\vqspace\noindent\textbf{問\theqnum}~}
+\def\exercise{\vqspace\noindent\textbf{練習問題}~}
+\def\nexercise{\stepcounter{qex}\vqspace\noindent\textbf{練習問題\theqex}~}
+\def\comment{\vqspace\noindent\textbf{解説~}}
+\def\ctitle#1{\vqspace\noindent\textbf{[解説: #1]}\\}
+
+\renewcommand{\thefootnote}{(注\arabic{footnote}}
+\newcounter{ans}
+\setcounter{ans}{0}
+\def\answer#1{%
+  \stepcounter{ans}%
+  \renewcommand{\thefootnote}{(答\arabic{ans}}%
+  \footnote[\arabic{ans}]{#1}%
+  %%    \endnote{#1}
+  \renewcommand{\thefootnote}{(注\arabic{footnote}}
+}
+
+
+%%%%%%%%%%%%%% captionとindexの設定設定 %%%%%%%% 
+\makeatletter
+\long\def\@makecaption#1#2{\small  % make title of figure '図1 #'
+ \vskip 7pt
+ \setbox\@tempboxa\hbox{#1\ \ #2}
+ \ifdim \wd\@tempboxa >\hsize #1\ \  #2\par \else \hbox
+ to\hsize{\hfil\box\@tempboxa\hfil} 
+ \fi}
+\def\bfindex{\@ifnextchar[{\@bfindex}{\@@bfindex}}
+\def\@bfindex[#1]#2{\textbf{#2}\index{#1@#2}}
+\def\@@bfindex#1{\textbf{#1}\index{#1}}
+
+\def\nmindex{\@ifnextchar[{\@nmindex}{\@@nmindex}}
+\def\@nmindex[#1]#2{#2\index{#1@#2}}
+\def\@@nmindex#1{#1\index{#1}}
+\makeatother
+
+%%%%%%%%%% subsubsubsectionの定義 %%%%%%%%%% 
+\makeatletter
+  \newcommand{\subsubsubsection}{\@startsection{paragraph}{4}{\z@}%
+    {1.0\Cvs \@plus.5\Cdp \@minus.2\Cdp}%
+    {.1\Cvs \@plus.3\Cdp}%
+    {\reset@font\normalsize\bfseries}
+  }
+  \makeatother
+  \setcounter{secnumdepth}{4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\prog{$^{\LARGE{\textbf{*}}}$}
+\def\vecx{\boldsymbol{x}}
+\def\vect#1{\boldsymbol{#1}}
+\def\grad{\mbox{grad}}
+\def\dim{\mbox{dim}}
+\def\tr{\mbox{tr}}
+\def\rank{\mbox{rank}}
+\def\diag{\mbox{diag}}
+\def\Real{\mathrm{\mathbf{R}}}
+% \def\Re{\mathrm{\mathbf{Re}}}
+% \def\Im{\mathrm{\mathbf{Im}}}
+\def\Re{\mathrm{Re}}
+\def\Im{\mathrm{Im}}
+
+% from qbank.sty
+\def\red#1{\color{red}#1\color{black}}
+\def\anscomment#1{\ifans\red{#1}\fi}
+\def\snbox#1{\fbox{~{#1}~}}
+
