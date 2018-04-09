@@ -71,7 +71,7 @@
 (\ref{litem:(x->+0)|x|/x}) $1$~
 (\ref{litem:(x->-0)|x|/x}) $-1$~
 (\ref{litem:(x->infty)e^x}) $\infty$
-(\ref{litem:(x->-infty)e^x}) $0$~ 
+(\ref{litem:(x->-infty)e^x}) $0$~
 (\ref{litem:(x->infty)e^-x}) $0$~
 (\ref{litem:(x->-infty)e^-x}) $\infty$
 }。
@@ -96,23 +96,23 @@
 \answer{
 (\ref{litem:(x->0)0/x}) $0$~
 (\ref{litem:(x->0)x/0}) 値無し~
-(\ref{litem:1/ex+1}) 1~ 
-(\ref{litem:ex-e-x/ex+e-x}) 1~ 
+(\ref{litem:1/ex+1}) 1~
+(\ref{litem:ex-e-x/ex+e-x}) 1~
 (\ref{litem:(+)1/1+e(-x/T)}) 1~
 (\ref{litem:(-)1/1+e(-x/T)}) 0~
 (\ref{litem:(+)1/e{1/x}+1}) $\frac{1}{2}$~
 (\ref{litem:(-)1/e{1/x}+1}) $\frac{1}{2}$~
 (\ref{litem:(+0)1/e{1/x}+1}) 0~
 (\ref{litem:(-0)1/e{1/x}+1}) 1~
-(\ref{litem:sqrt(x+1)-1}) 1/2~ 
-(\ref{litem:sqrt(x2+1)-1}) 1~ 
+(\ref{litem:sqrt(x+1)-1}) 1/2~
+(\ref{litem:sqrt(x2+1)-1}) 1~
 (\ref{litem:(x-1)/sqrt(x)-1}) 2~
 (\ref{litem:sinx/sqrtx}) 0~
 (\ref{litem:sin2h/h}) 2~
 (\ref{litem:tan t/t}) 1~
 (\ref{litem:(1+x)^1/x}) e~
 (\ref{litem:(1+a/t)^t}) $e^a$~
-(\ref{litem:log(1+x)/x}) 1~ 
+(\ref{litem:log(1+x)/x}) 1~
 }
 (ロピタルの定理は禁止）。
 ただし、必要であれば以下の2式を用いても良い。
@@ -129,9 +129,9 @@
 \item \label{litem:1/ex+1}$\displaystyle\lim_{x\to-\infty}\frac{1}{e^x+1}$
 \item \label{litem:ex-e-x/ex+e-x}$\displaystyle\lim_{x\to\infty}\frac{e^x-e^{-x}}{e^x+e^{-x}}$
 \item
-  \label{litem:(+)1/1+e(-x/T)}$\displaystyle\lim_{x\to\infty}\frac{1}{1+e^{-\frac{x}{T}}}$ \quad($T>0$) 
+  \label{litem:(+)1/1+e(-x/T)}$\displaystyle\lim_{x\to\infty}\frac{1}{1+e^{-\frac{x}{T}}}$ \quad($T>0$)
 \item
-  \label{litem:(-)1/1+e(-x/T)}$\displaystyle\lim_{x\to-\infty}\frac{1}{1+e^{-\frac{x}{T}}}$ \quad($T>0$) 
+  \label{litem:(-)1/1+e(-x/T)}$\displaystyle\lim_{x\to-\infty}\frac{1}{1+e^{-\frac{x}{T}}}$ \quad($T>0$)
 \item \label{litem:(+)1/e{1/x}+1}$\displaystyle\lim_{x\to\infty}\frac{1}{e^\frac{1}{x}+1}$
 \item \label{litem:(-)1/e{1/x}+1}$\displaystyle\lim_{x\to-\infty}\frac{1}{e^\frac{1}{x}+1}$
 \item \label{litem:(+0)1/e{1/x}+1}$\displaystyle\lim_{x\to+0}\frac{1}{e^\frac{1}{x}+1}$
@@ -158,9 +158,9 @@
 \begin{enumerate}
 \item
   \label{litem:dsinx}$\displaystyle\lim_{h\to0}\frac{\sin(x+h)-\sin x}{h}$
-\item 
+\item
   \label{litem:dcosx}$\displaystyle\lim_{h\to0}\frac{\cos(x+h)-\cos x}{h}$
-\item 
+\item
   \label{litem:dlogx}$\displaystyle\lim_{h\to0}\frac{\log(x+h)-\log x}{h}$
 \end{enumerate}
 
@@ -176,9 +176,9 @@ $f'(x)$, $\displaystyle\frac{df}{dx}$, $\displaystyle\frac{d}{dx}f$な
 \end{align}
 また、導関数を求めることを「\textbf{微分}する」と言い、
 しばしば導関数自体を\bfindex[びぶん]{微分}(\nmindex{differentiation})
-と呼ぶ。 
+と呼ぶ。
 
-物理や工学の分野では、時間$t$の関数$f(t)$の導関数を$\dot{f}(t)$ 
+物理や工学の分野では、時間$t$の関数$f(t)$の導関数を$\dot{f}(t)$
 (「エフドット」と読む)と表し、他の変数による微分と区別する。
 
 \nquestion
@@ -188,7 +188,7 @@ $f'(x)$, $\displaystyle\frac{df}{dx}$, $\displaystyle\frac{d}{dx}f$な
 \comment
 関数は入力値に出力値に対応づける規則である。
 一方，\textbf{微分}という操作は\textbf{入力関数に対応した関数(導関数)
-  を出力する}点で関数とは異なる。
+  を出力する操作}である。
 
 \subsubsection{導関数の幾何学的意味}
 
@@ -230,7 +230,7 @@ $\displaystyle\frac{d}{dx}f(x)$のグラフを描きなさい．\\
 以下を導関数の定義に従って証明せよ。
 \begin{enumerate}
 \item $(2)'=0$
-\item $(x^3)'=3x^2$
+\item $(x^2)'=2x$
 \item $(x^{-2})'=-2x^{-3}$
 \item $(x^n)'=nx^{n-1}$ ($n$:正の整数)
 \item $(x^n)'=nx^{n-1}$ ($n$:負の整数)
@@ -360,7 +360,7 @@ Chain ruleを用いて以下の導関数を求めよ
 \end{quote}
 で与えられることに注意しなさい
 \answer{
-% (\ref{ditem:weight})~ 
+% (\ref{ditem:weight})~
 (\ref{ditem:displaycement})~$\Delta x =x(t_2)-x(t_1)$~
 (\ref{ditem:avrvel}) $\displaystyle \frac{\Delta x}{\Delta t}=\frac{x(t_2)-x(t_1)}{t_2-t_1}$\\
 (\ref{ditem:dV>0}) 物体の体積を$V$とする。$\dot{V}<0$\\
@@ -376,13 +376,13 @@ Chain ruleを用いて以下の導関数を求めよ
 \item\label{ditem:displaycement} 時刻$t_1$から時刻$t_2$までの間の位置$x(t)$
   の変化を変位$\Delta x$とよぶ。
 \item\label{ditem:avrvel} 時刻$t_1$から時刻$t_2$までの間の位置$x$
-  の平均変化率をここでは$\displaystyle\frac{\Delta x}{\Delta t}$で表す。
+  の平均変化率を$\displaystyle\frac{\Delta x}{\Delta t}$で表す。
 \item\label{ditem:dV>0} ある物体の体積が時間とともに減少している。
 \item\label{ditem:v=0} ある物体が時刻$t=0$において静止している。
 \item\label{ditem:dT=0} ある物体の温度は時間によらず一定である。
-\item\label{ditem:dT(t0)=0} 
+\item\label{ditem:dT(t0)=0}
   ある物体の温度が時刻$t_0$に極小値もしくは極大値になる。
-\item\label{ditem:dT} ある物体が一定の温度$T_0$の恒温槽にあるとする。このとき物体の温度$T$は$T_0$に近づいていくが、その変化の割合は温度差に比例する。
+\item\label{ditem:dT} ある物体が一定の温度$T_0$の恒温槽にあるとする。このとき物体の温度$T$は$T_0$に近づいていくが、その時間変化率は温度差に比例する。
 \end{enumerate}
 
 
@@ -431,7 +431,7 @@ $P=kn_rn_w$ ($k$は正の定数)\\
   遭遇確率に比例する増加率の和によって表される。
   ただし，狼は餌になるうさぎがいなかったら減少する。
 \end{enumerate}
-\item (\ref{ditem:usa-change}),(\ref{ditem:wolf-change})で定式化した微分方程式は，捕食者と被食者の個体変動モデルとして有名であり，Lotka-Volterra方程式とよばれている。
+\item 前問の(\ref{ditem:usa-change})と(\ref{ditem:wolf-change})で定式化した微分方程式は，捕食者と被食者の個体変動モデルとして有名であり，Lotka-Volterra方程式とよばれている。
   実際にこの方程式で予測されるような個体数の変動は自然界でしばしば観察されることが報告されている。
   さて，うさぎと狼の個体数が一定となる条件を，Lotka-Volterra方程式より求めなさい。
 \end{enumerate}
@@ -502,7 +502,7 @@ $y-1=2x$\;
 
 \nquestion 以下の問に答えなさい。
 \begin{enumerate}
-\item 
+\item
 2曲線$y=f(x)$と$y=g(x)$が点$(x_0,y_0)$で接する条件を述べなさい
 \answer{
 $y_0=f(x_0)=g(x_0)$,
@@ -511,7 +511,7 @@ $f'(x_0)=g'(x_0)$
 。
 \item $f(x)$と$g(x)$を$x$の多項式であるとして，以下の問に答えなさい。
   \begin{enumerate}
-  \item 
+  \item
     方程式$f(x)=g(x)$が重根をもつならば，
     2曲線$y=f(x)$と$y=g(x)$は接点をもつことを示しなさい
     \answer{
@@ -524,7 +524,7 @@ $f'(x_0)=g'(x_0)$
     このとき，$x=x_0$で前問で述べた条件($f(x_0)=g(x_0)$, $f'(x_0)=g'(x_0)$)が
     成り立つことを示せば良い。
     }。
-  \item 
+  \item
      前問の逆も成り立つことを証明しなさい。すなわち
     2曲線$y=f(x)$と$y=g(x)$が接点をもつならば，
     方程式$f(x)=g(x)$が重根をもつことを示しなさい
@@ -607,7 +607,7 @@ $\displaystyle f^{(n)}(x)=
 \item\label{eq:fvOFlog(1+x)} $f(x)=\log (1+x)$
 % \item $\displaystyle f(x)=\frac{1}{1-x}$
 \end{enumerate}
-\nquestion 
+\nquestion
 $x=A\sin(\omega t+\phi)$が次式を満たすような$\omega$の値を求め
 なさい。ただし, $A$, $\phi$は定数である。
 \begin{align}
@@ -657,12 +657,14 @@ $a_n$を求める方法を考えてみよう。
 %https://en.wikipedia.org/wiki/Colin_Maclaurin
 }という。
 
-\nquestion\answer{
+\nquestion
+以下の問いに答えなさい
+\answer{
 (\ref{itemM:(1+x)^n}) $\displaystyle(1+x)^n=\sum_{m=0}^n\frac{n!}{m!(n-m)!}x^m$
 (\ref{itemM:Me^x}) $\displaystyle e^x=\sum_{n=0}^\infty\frac{x^n}{n!}$~
 (\ref{itemM:sinx}) $\displaystyle \sin x=\sum_{m=0}^\infty\frac{(-)^{m}}{(2m+1)!}x^{2m+1}$~
 (\ref{itemM:cosx}) $\displaystyle \cos x=\sum_{m=0}^\infty\frac{(-)^m}{(2m)!}x^{2m}$~
-}
+}。
 \begin{enumerate}
 \item\label{itemM:(1+x)^n} $(1+x)^n$ をマクローリン展開しなさい。
 その結果より，$x\ll 1$のとき次式が成り立つことを示しなさい。
@@ -706,7 +708,7 @@ $\displaystyle f(x)=\frac{1}{1-x}$\quad$(|x|<1)$をマクローリン展開に�
 \footnote{
 テイラー展開はスコットランドの数学者・天文学者のジェームス・\nmindex{グレゴリー}
 (James Gregory\index{Gregory, James}, 1638-1675, スコットランド)による発案。
-イギリスの数学者ブルック・\nmindex{テイラー} 
+イギリスの数学者ブルック・\nmindex{テイラー}
 (Brook Taylor\index{Taylor, Brook}, 1685-1731)が1715年に出版した著書にこの
 級数展開法を記したのが後にラグランジュの目に止まり，注目されるようになった。
 %https://en.wikipedia.org/wiki/Brook_Taylor
@@ -733,6 +735,7 @@ $\displaystyle f(x)=\frac{1}{1-x}$\quad$(|x|<1)$をマクローリン展開に�
 \subsection{オイラーの公式}
 
 \subsubsection{オイラーの公式の導出}
+\nquestion 以下の問いに答えなさい。
 \begin{enumerate}
 \item マクローリン展開を用いてオイラー
 \footnote{レオンハルト・\nmindex{オイラー}（
@@ -761,8 +764,9 @@ Leonhard Euler\index{Euler, Leonhard},
 
 \subsubsection{オイラーの公式と三角関数の公式}
 
+\nquestion 以下の問いに答えなさい。
 \begin{enumerate}
-\item 
+\item
 オイラーの公式を用いて以下を証明しなさい。
 \begin{enumerate}
 \item $\sin(x\pm y)=\sin x\cos y\pm\sin y\cos x$
@@ -788,7 +792,7 @@ Leonhard Euler\index{Euler, Leonhard},
 %   微分が得られることがわかる。同様にして$\sin x$, $\cos x$の
 %   $n$階微分を求めなさい。
 \item 以下の式で$a$, $b$が与えられたとき，どのように$r$, $\phi$を
-  決めたら等式が成り立つか？ 
+  決めたら等式が成り立つか？
   \begin{align}
     a\sin x+b\cos x=r\sin(x+\phi)\notag
   \end{align}
@@ -815,9 +819,13 @@ Leonhard Euler\index{Euler, Leonhard},
   z&=|z|e^{i\theta}\\
   &=|z|(\cos\theta+i\sin\theta)
 \end{align*}
+
+\nquestion 以下の問いに答えなさい。
 \begin{enumerate}
 \item $|z|$, $\cos\theta$，$\sin\theta$を$a$, $b$で表しな
   さい。
+\item 虚数単位$i$を$re^{i\theta}$の形に表しなさい。
+\item 複素数$z$に虚数単位$i$をかける演算は，複素空間上で原点周りに$\frac{i}{2}$回転する変換と等価であることを説明しなさい。
 \item 複素数$z_1$, $z_2$の大きさおよび\nmindex[へんかく]{偏角}と，
   以下の各値の大きさおよび偏角はどのような関係にあるか。
   オイラーの公式を利用して答えなさい。
@@ -882,7 +890,7 @@ Leonhard Euler\index{Euler, Leonhard},
 \begin{enumerate}
 \item $z=1+i$, $w=2+i$の場合について，幾何学的に考えることで，点$w_z$を表す複素数を答えなさ
   い。
-\item 
+\item
   座標軸を平行移動して$z$が原点になるように取り直す。
   もとの座標系を$L_1$, 新しい座標系を$L_2$とする。
   \begin{enumerate}
@@ -924,6 +932,7 @@ $F(x)$を$f(x)$の\bfindex[げんしかんすう]{原始関数}(\nmindex{antider
 
 
 \subsubsection{不定積分の幾何学的意味}
+\nquestion
 以下の数式の幾何学的意味を説明しなさい。
 \begin{enumerate}
 \item $\displaystyle\int 0 dt=C$\quad ($a$は定数,$C$は積分定数)
@@ -963,7 +972,7 @@ $F(x)$を$f(x)$の\bfindex[げんしかんすう]{原始関数}(\nmindex{antider
 \end{align}
 すなわち，次のような積分公式を得ることができる。
 \begin{align}
-\int\cos x dx=\sin x +C\notag  
+\int\cos x dx=\sin x +C\notag
 \end{align}
 
 上の微分公式から積分公式をそれぞれ導きなさい。
@@ -1033,7 +1042,7 @@ $F(x)$を$f(x)$の\bfindex[げんしかんすう]{原始関数}(\nmindex{antider
 \begin{align}
   S=\lim_{n\to \infty}\sum_{i=0}^nf(x_i)\Delta x
 \end{align}
-ここで，$\displaystyle\lim_{n\to \infty}\sum_{i=0}^n$を$\displaystyle\int_a^b$, 
+ここで，$\displaystyle\lim_{n\to \infty}\sum_{i=0}^n$を$\displaystyle\int_a^b$,
 微小幅である$\Delta x$を$dx$と簡単化のためおき直すと，面積は次式のように書ける。
 \begin{align}
 \label{eq:integration}
@@ -1312,7 +1321,7 @@ $b$, $c$は次のように求める。まず$(x-1)^2$を両辺にかける。
 以下の不定積分を求めなさい
 \answer{
 (\ref{iitem:x/(x^x+2x+1)}) $\frac{1}{x+1}+\log|x+1|+C$~
-(\ref{iitem:1/(x^3-8x^2+20x-16)}) 
+(\ref{iitem:1/(x^3-8x^2+20x-16)})
 $\frac{1}{4}\{\frac{2}{x-2}+\log\left|\frac{x-4}{x-2}\right|\}+C$
 }。
 \begin{enumerate}
@@ -1405,7 +1414,7 @@ $\frac{1}{4}\{\frac{2}{x-2}+\log\left|\frac{x-4}{x-2}\right|\}+C$
 \exercise
 以下の不定積分を求めよ。また，答を微分することにより検算せよ
 \answer{
-(\ref{item:sqrt(1-x2)}) $\frac{1}{2}(x\sqrt{1-x^2}+\sin^{-1}x)+C$ 
+(\ref{item:sqrt(1-x2)}) $\frac{1}{2}(x\sqrt{1-x^2}+\sin^{-1}x)+C$
 or
  $\frac{1}{2}(x\sqrt{1-x^2}-\cos^{-1}x)+C$~
 (\ref{item:1/sqrt(1-x2)}) $\sin^{-1}x+C$ or  $-\cos^{-1}x+C$~
@@ -1461,7 +1470,7 @@ $\displaystyle t=\tan\frac{x}{2}$とおくと三角関数で構成される関�
   \end{enumerate}
 \item 以下の不定積分を求めよ。また，答を微分することにより検算せよ
 \answer{
-% (\ref{item:1/sinx}) 
+% (\ref{item:1/sinx})
 $\log|\tan\frac{x}{2}|+C$~
 }。
 
@@ -1498,7 +1507,7 @@ $\displaystyle\int \frac{1}{\sin x}dx$
 %    \resizebox{4.5cm}{!}{\includegraphics{int_triangle.eps}}}
 %    \begin{overpic}[width=4.5cm,grid,tics=10]{int_triangle.eps}
     \begin{overpic}[width=4.5cm]{int_triangle.eps}
-      {\small 
+      {\small
         \put(5,5){$O$}
         \put(90,7){$x$}
         \put(5,90){$y$}
@@ -1519,7 +1528,7 @@ $\displaystyle\int \frac{1}{\sin x}dx$
 %    \resizebox{4.5cm}{!}{\includegraphics{int_triangle2.eps}}}
 %    \begin{overpic}[width=4.5cm,grid,tics=10]{int_triangle2.eps}
     \begin{overpic}[width=4.5cm]{int_triangle2.eps}
-      {\small 
+      {\small
         \put(5,5){$O$}
         \put(90,7){$x$}
         \put(5,90){$y$}
@@ -1542,7 +1551,7 @@ $\displaystyle\int \frac{1}{\sin x}dx$
 %    \resizebox{4.5cm}{!}{\includegraphics{int_triangle3.eps}}}
 %    \begin{overpic}[width=4.5cm,grid,tics=10]{int_triangle3.eps}
     \begin{overpic}[width=4.5cm]{int_triangle3.eps}
-      {\small 
+      {\small
         \put(5,5){$O$}
         \put(90,7){$x$}
         \put(5,90){$y$}
@@ -1561,7 +1570,7 @@ $\displaystyle\int \frac{1}{\sin x}dx$
 %    \resizebox{4.5cm}{!}{\includegraphics{int_triangle3.eps}}}
 %    \begin{overpic}[width=4.5cm,grid,tics=10]{int_triangle3.eps}
     \begin{overpic}[width=4.5cm]{int_triangle4.eps}
-      {\small 
+      {\small
         \put(5,5){$O$}
         \put(90,7){$x$}
         \put(5,90){$y$}
@@ -1635,7 +1644,7 @@ y&\le -x+1
 %    \resizebox{4.0cm}{!}{\includegraphics{circle-xy.eps}}}
 %    \begin{overpic}[width=4.5cm,grid,tics=10]{circle-xy.eps}
     \begin{overpic}[width=4.5cm]{circle-xy.eps}
-      {\small 
+      {\small
         \put(40,40){$O$}
         \put(95,41){$x$}
         \put(44,94){$y$}
@@ -1655,7 +1664,7 @@ y&\le -x+1
 %    \resizebox{4.0cm}{!}{\includegraphics{circle-r.eps}}}
 %    \begin{overpic}[width=4.5cm,grid,tics=10]{circle-r.eps}
     \begin{overpic}[width=4.5cm]{circle-r.eps}
-      {\small 
+      {\small
         \put(40,40){$O$}
         \put(95,41){$x$}
         \put(44,94){$y$}
@@ -1674,7 +1683,7 @@ y&\le -x+1
   \subcaptionbox{}{
 %    \begin{overpic}[width=4.5cm,grid,tics=10]{circle-r2.eps}
     \begin{overpic}[width=4.5cm]{circle-r2.eps}
-      {\small 
+      {\small
         \put(40,40){$O$}
         \put(95,41){$x$}
         \put(44,94){$y$}
@@ -1754,7 +1763,7 @@ $\displaystyle\int_0^{2\pi}hr d\theta$
 その頂点を原点に，$z$軸が円錐の中心軸と一致するようにとる(図\ref{fig:cylinder})。
 
 この円錐の微小高さ$z\sim z+dz$における微小部分の体積を半径
-$\displaystyle r'=\frac{z}{h}r$, 
+$\displaystyle r'=\frac{z}{h}r$,
 高さ$dz$の微小円柱と同じとみなすと、その体積$dV$は次式で与えられる。
 \begin{align}
 dV=dz\cdot\pi r'^2=dz\cdot\pi\left(\frac{z}{h}r\right)^2\notag
@@ -1794,7 +1803,7 @@ dV=dz\cdot\pi r'^2=dz\cdot\pi\left(\frac{z}{h}r\right)^2\notag
   \end{center}
 \end{figure}
 
-\question 
+\question
 以下の立体の体積を求めなさい。
 どのように計算式を導いたかを図を描いて説明すること。
 \begin{enumerate}
@@ -1868,7 +1877,7 @@ dV=dz\cdot\pi r'^2=dz\cdot\pi\left(\frac{z}{h}r\right)^2\notag
 
 \subsection{広義積分}
 
-積分区間の一端(もしくは両端)で被積分関数が発散する場合や, 
+積分区間の一端(もしくは両端)で被積分関数が発散する場合や,
 積分区間の一端(もしくは両端)が正もしくは負の無限大となる定積分を
 \bfindex[こうぎせきぶん]{広義積分}と呼ぶ。
 例えば, 以下の定積分を考えよう。
@@ -1936,7 +1945,7 @@ $v=\dot{x}$とおくと次式をえる。
   グラフを書いて説明しなさい。
 \item $F$が一定値の場合，その符号に応じて$v$は時間とともにどのように変
   わるか。グラフを書いて説明しなさい。
-\item 
+\item
 物体が力$F(t)$をうけながら時刻$t$から$t+\Delta t$までの間に$x$から
 $x+\Delta x$まで移動した。
 このとき以下の式が成立することを証明しなさい。
@@ -1967,9 +1976,9 @@ $x+\Delta x$まで移動した。
 \answer{
 (\ref{item:stick-m})~$\displaystyle m=\int_0^l\rho(x)dx$\\
 (\ref{item:stick-com})~$\displaystyle X=\frac{\displaystyle\int_0^lx\rho(x)dx}{\displaystyle\int_0^l\rho(x)dx}=\frac{1}{m}\int_0^lx\rho(x)dx$\\
-(\ref{item:stick-com-1})~$\displaystyle X=\frac{l}{2}$, 
+(\ref{item:stick-com-1})~$\displaystyle X=\frac{l}{2}$,
 (線密度は(\ref{item:stick-m})の関係式を用いると$\rho=m/l$)\\
-(\ref{item:stick-com-2})~$\displaystyle X=\frac{2}{3}l$, 
+(\ref{item:stick-com-2})~$\displaystyle X=\frac{2}{3}l$,
 (線密度は$\displaystyle\rho=\frac{2m}{l^2}x$)
 }。
 \begin{enumerate}
@@ -2010,8 +2019,8 @@ $\dot{x}>0$の場合，$x$は時間とともに増えるだろうか，それと
 \item $\dot{x}=(1-x)x$
 % \item $y'=y^2-3y+2$
 \end{enumerate}
-  
-  
+
+
 \subsection{変数分離型微分方程式の解法}
 以下の微分方程式の解を求めよ。また，求めた解を微分方程式に代入す
 ることにより検算せよ
@@ -2110,10 +2119,10 @@ $\dot{x}>0$の場合，$x$は時間とともに増えるだろうか，それと
 \answer{
 (\ref{item:bucket}) 積分方程式は$\displaystyle V=\int_0^tadt$，
 微分方程式は$\dot{V}=a$。ただし$V(0)=0$。
-(\ref{item:bucket-hole}) 
+(\ref{item:bucket-hole})
 積分方程式は$\displaystyle V=b-\int_0^tkVdt$ ($k$は正の定数)。
 微分方程式は$\displaystyle \dot{V}=-kV$ ($k$は正の定数)。ただし，$V(0)=b$.
-(\ref{item:bucket-in-out}) 
+(\ref{item:bucket-in-out})
 積分方程式は$\displaystyle V=\int_0^t(a-kV)dt$ ($k$は正の定数)
 微分方程式は$\displaystyle \dot{V}=a-kV$ ($k$は正の定数)。ただし，$V(0)=0$.
 (\ref{item:bucket-final}) 前問の微分方程式において$\dot{V}=0$となる時
@@ -2130,10 +2139,10 @@ $\displaystyle\lim_{t\to\infty}V(t)$を求めても良い。
   バケツに水を入れてから$t$秒後の水の量$V$とする。
   上記の文章を定式化することにより，
   $V$が満たすべき積分方程式と微分方程式をそれぞれ書きなさい。
-\item\label{item:bucket-in-out} 
+\item\label{item:bucket-in-out}
   空のバケツに毎秒$a$リットルの水を入れる。
   しかし, このバケツには小さな穴が空いていて水が漏る。
-  単位時間あたりに水の漏る量はバケツに残っている水の量$V$に比例する。 
+  単位時間あたりに水の漏る量はバケツに残っている水の量$V$に比例する。
   バケツに水を入れ初めてから$t$秒後の水の量を$V$とするとき，
   $V$が満たすべき積分方程式と微分方程式をそれぞれ書きなさい。
 \item\label{item:bucket-final} 前問のバケツにしばらく水を入れ続けてい
@@ -2222,7 +2231,7 @@ $\displaystyle\lim_{t\to\infty}V(t)$を求めても良い。
 %\item $\ddot{x}+4\dot{x}+5x=0$
 %\item $\ddot{x}+2\dot{x}+x=0$
 %\end{enumerate}
-  
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 \newpage
 \appendix
