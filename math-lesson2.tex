@@ -646,7 +646,7 @@ $a_n$を求める方法を考えてみよう。
 \bfindex[まくろーりんてんかい]{マクローリン展開}
 (\nmindex{Maclaurin expansion})
 \footnote{
-スコットランドの数学者\href{https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%AA%E3%83%B3%E3%83%BB%E3%83%9E%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AA%E3%83%B3}{コリン・マクローリン}\index{マクローリン}(Colin Maclaurin\index{Maclaurin, Colin}, 1698-1746)にちなむ。
+%スコットランドの数学者\href{https://ja.wikipedia.org/wiki/コリン・マクローリン}{コリン・マクローリン}\index{マクローリン}(Colin Maclaurin\index{Maclaurin, Colin}, 1698-1746)にちなむ。
 マクローリンは11歳でグラスゴー大学に入学, 19歳にはアバディーン大学の教授，その後
 ニュートンに才能を認められ，ニュートンによる推薦状によって27歳でエジンバラ大学の教授に就任している。
 マクローリンは最も若く教授になった人物として約300年にわたって記録保持者だったが
@@ -1359,10 +1359,37 @@ $\frac{1}{4}\{\frac{2}{x-2}+\log\left|\frac{x-4}{x-2}\right|\}+C$
 
 \subsubsection{積分のChain Rule: 変数変換}
 複雑な関数を積分したい時には、試行錯誤的に変数変換をしてみる。
-変数変換は以下のように行う。
+すなわち，
+\begin{align*}
+  \int f(x)dx
+\end{align*}
+に対して，変数$x$を別の変数$t$に関連づけることで，$x$の関数$f$を，$t$の関数に
+置き換えることで，積分可能な形に変形できるかを考える。
+
+ここでは，変数$x$と変数$t$の間に関係式$x=x(t)$が成り立つとする。
+この時，関数$F(x)$は以下のように$t$による式に書き直せる。
 \begin{align}
-  \int f(x)dx=\int f(x(t))\frac{dx}{dt}dt\notag
+\label{eq:F=F}
+F(x)=F(x(t))
 \end{align}
+ここで，$f=\frac{dF}{dx}$とおくと，次式が成り立つ。
+\begin{align}
+	F(x)&=\int\frac{dF}{dx}dx\notag\\
+	&=\int fdx
+\label{eq:dF1}
+\end{align}
+また，
+\begin{align}
+F(x(t))&=\int\frac{dF(x(t))}{du}du\notag\\
+	&=\int\frac{dF}{dx}\frac{dx}{dt}dt\notag\\
+	&=\int f\frac{dx}{dt}dt
+\label{eq:dF2}	
+\end{align}
+式(\ref{eq:dF1}), (\ref{eq:dF2})を式(\ref{eq:F=F})に代入すると次式を得る。
+\begin{align*}
+  \int f(x)dx=\int f(x(t))\frac{dx}{dt}dt
+\end{align*}
+これが変数変換の公式である。
 
 \exercise
 以下の積分計算をしなさい
