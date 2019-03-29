@@ -1934,6 +1934,39 @@ dV=dz\cdot\pi r'^2=dz\cdot\pi\left(\frac{z}{h}r\right)^2\notag
 \end{enumerate}
 
 \subsection{力学と微積分}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\subsubsection{重心と積分}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\nquestion
+長さ$l$, 質量$m$の棒がある。
+この棒に沿って$x$軸を取り, その原点は棒の一端にとる。
+この棒は位置によって線密度(単位長さあたりの質量)が異なる。
+そこで位置$x$における線密度を$\rho(x)$とおく。
+この棒について以下の問に答えなさい
+\answer{
+(\ref{item:stick-m})~$\displaystyle m=\int_0^l\rho(x)dx$\\
+(\ref{item:stick-com})~$\displaystyle X=\frac{\displaystyle\int_0^lx\rho(x)dx}{\displaystyle\int_0^l\rho(x)dx}=\frac{1}{m}\int_0^lx\rho(x)dx$\\
+(\ref{item:stick-com-1})~$\displaystyle X=\frac{l}{2}$,
+(線密度は(\ref{item:stick-m})の関係式を用いると$\rho=m/l$)\\
+(\ref{item:stick-com-2})~$\displaystyle X=\frac{2}{3}l$,
+(線密度は$\displaystyle\rho=\frac{2m}{l^2}x$)
+}。
+\begin{enumerate}
+\item\label{item:stick-m} $\rho(x)$と$m$の関係式を表しなさい。
+\item\label{item:stick-com} この棒の重心位置$X$を表す式を書きなさい
+  \footnote{質量$m_1, m_2, \cdots, m_n$の物体がそれぞれ位置$x_1, x_2,
+    \cdots, x_n$にあるとき,
+    その重心位置$X$は
+    $\displaystyle X=\frac{\displaystyle\sum_{i=1}^nm_ix_i}{\displaystyle\sum_{i=1}^nm_i}$で与えられる。
+  }。
+\item\label{item:stick-com-1} 線密度$\rho$が実は位置によらない定数であっ
+  た場合について重心位置を求めなさい。ただし, $\rho$を使わずに答えること。
+\item\label{item:stick-com-2} 線密度が$\rho(x)$が原点からの距離に比例
+  する場合について重心位置を求めなさい。ただし, $\rho$を使わずに答えること。
+\end{enumerate}
+
 %\subsubsection{距離・速度・加速度}
 %\question
 %ある物体が直線上を運動している。
@@ -1988,38 +2021,6 @@ $x+\Delta x$まで移動した。
   =&F\Delta x\quad (F: 一定のとき)\notag
 \end{align}
 \end{enumerate}
-\end{enumerate}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-\subsubsection{重心と積分}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-\nquestion
-長さ$l$, 質量$m$の棒がある。
-この棒に沿って$x$軸を取り, その原点は棒の一端にとる。
-この棒は位置によって線密度(単位長さあたりの質量)が異なる。
-そこで位置$x$における線密度を$\rho(x)$とおく。
-この棒について以下の問に答えなさい
-\answer{
-(\ref{item:stick-m})~$\displaystyle m=\int_0^l\rho(x)dx$\\
-(\ref{item:stick-com})~$\displaystyle X=\frac{\displaystyle\int_0^lx\rho(x)dx}{\displaystyle\int_0^l\rho(x)dx}=\frac{1}{m}\int_0^lx\rho(x)dx$\\
-(\ref{item:stick-com-1})~$\displaystyle X=\frac{l}{2}$,
-(線密度は(\ref{item:stick-m})の関係式を用いると$\rho=m/l$)\\
-(\ref{item:stick-com-2})~$\displaystyle X=\frac{2}{3}l$,
-(線密度は$\displaystyle\rho=\frac{2m}{l^2}x$)
-}。
-\begin{enumerate}
-\item\label{item:stick-m} $\rho(x)$と$m$の関係式を表しなさい。
-\item\label{item:stick-com} この棒の重心位置$X$を表す式を書きなさい
-  \footnote{質量$m_1, m_2, \cdots, m_n$の物体がそれぞれ位置$x_1, x_2,
-    \cdots, x_n$にあるとき,
-    その重心位置$X$は
-    $\displaystyle X=\frac{\displaystyle\sum_{i=1}^nm_ix_i}{\displaystyle\sum_{i=1}^nm_i}$で与えられる。
-  }。
-\item\label{item:stick-com-1} 線密度$\rho$が実は位置によらない定数であっ
-  た場合について重心位置を求めなさい。ただし, $\rho$を使わずに答えること。
-\item\label{item:stick-com-2} 線密度が$\rho(x)$が原点からの距離に比例
-  する場合について重心位置を求めなさい。ただし, $\rho$を使わずに答えること。
 \end{enumerate}
 
 \newpage
