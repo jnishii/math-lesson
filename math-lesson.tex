@@ -1561,13 +1561,13 @@ x^n=a\notag
 % となる。
 % 時間$T/2$毎に細胞分裂をするが, その度に増える割合は$\frac{r}{2}$
 
-利子が$x$の一年複利で貯金をした場合，一年後に手に入れることが出来る金額が元の何倍か(貯金の増加率)を計算すると以下になる。
+利子が$r$の一年複利で貯金をした場合，一年後に手に入れることが出来る金額が元の何倍か(貯金の増加率)を計算すると以下になる。
 \begin{align*}
-  (1+x)^1
+  (1+r)^1
 \end{align*}
 半年複利で利子$x/2$(半年当たり)で貯金した場合, 一年間での貯金の増加率は
 \begin{align*}
-  \displaystyle \left(1+\frac{x}{2}\right)^2
+  \displaystyle \left(1+\frac{r}{2}\right)^2
 \end{align*}
 である。
 このように複利計算の期間をどんどん短くしていくと表\ref{tab:money}のようになる。
@@ -1587,12 +1587,12 @@ $\vdots$ & $\displaystyle\vdots$       & $\vdots$  &\\\hline
   \end{tabular}
 \end{table}
 }
-，さらに複利計算の期間をどんどん短くした極限($n\to\infty$)をとった場合の一年間の増加率は
+さらに複利計算の期間をどんどん短くしていった極限($n\to\infty$)における貯金の増加率は次式の通りである。
 \begin{align}
 	\label{eq:Napier-exp}
-  \lim_{n\to\infty} \left( 1 + \frac{x}{n} \right)^n
+  \lim_{n\to\infty} \left( 1+\frac{r}{n} \right)^n
   \end{align}
-となる。上式で利率を$x=1$ ($100\%$)とした場合の増加率を
+上式で利率を$r=1$ ($100\%$)とした場合の増加率を
 \bfindex[ねいぴあすう]{ネイピア数}
 \footnote{対数の発明者ジョン・ネイピアにちなんだ名称。
 ネイピアが作成した対数表の底は$e$に非常に近い定義に基づく値であった。
@@ -1607,12 +1607,12 @@ e=\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^{n}=2.71828\cdots\notag
 \end{align}
 と続く数であることが知られている。
 
-$e$を用いると式(\ref{eq:Napier-exp})は
+$e$を用ると式(\ref{eq:Napier-exp})は次式のように表される。
 \begin{align}
 	\label{eq:natural-exponential}
 	e^x = \lim_{n\to\infty} \left( 1 + \frac{x}{n} \right)^n
 \end{align}
-と表すことができる。これがオイラーによる\bfindex[しぜんしすうかんすう]{自然指数関数}\footnote{底を$e$とする指数関数}の定義式である。さらに，この定義に基づき，底を$a$とする指数関数も以下のように計算できる。
+ただし，変数$r$を$x$と置き直した。これがオイラーによる\bfindex[しぜんしすうかんすう]{自然指数関数}\footnote{底を$e$とする指数関数}の定義式である。さらに，この定義に基づき，底を$a$とする指数関数も以下のように計算できる。
 \begin{align}
 	\label{eq:euler-exponential}
 	a^x=e^{x\cdot \ln a}
