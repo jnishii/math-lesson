@@ -818,18 +818,19 @@ Leonhard Euler\index{Euler, Leonhard},
 
 \subsubsection{オイラーの公式と複素数\label{sec:Euler-complex}}
 
-複素数$z=a+bi$は偏角$\theta=\arg z$を用いて次のように
-書くことができる。
+複素数$z=re^i{\theta}$, $(rは正の実数)$はオイラーの公式により次のように書くことができる。
 \begin{align*}
 %   \label{eq:complex}
-  z&=|z|e^{i\theta}\\
-  &=|z|(\cos\theta+i\sin\theta)
+  z&=re^{i\theta}\\
+  &=r\cos\theta+ir\sin\theta
 \end{align*}
 
 \nquestion 以下の問いに答えなさい。
 \begin{enumerate}
-\item $|z|$, $\cos\theta$，$\sin\theta$を$a$, $b$で表しな
-  さい。
+\item 複素数$z=re^i{\theta}$を$z=a+bi$の形に書き直したい。
+$a$, $b$を$|z|$, $\cos\theta$，$\sin\theta$で表しなさい。
+ただし，$\theta$は$z$の偏角($\theta=\arg z$)とする。
+
 \item 虚数単位$i$を$re^{i\theta}$の形に表しなさい。
 \item 複素数$z$に虚数単位$i$をかける演算は，複素空間上で原点周りに$\frac{i}{2}$回転する変換と等価であることを説明しなさい。
 \item 複素数$z_1$, $z_2$の大きさおよび\nmindex[へんかく]{偏角}と，
@@ -932,9 +933,9 @@ $f(x)$を\textbf{被積分関数}，
 定数$C$を\bfindex[せきぶんていすう]{積分定数}(\nmindex{constant of integration})，
 $F(x)$を$f(x)$の\bfindex[げんしかんすう]{原始関数}(\nmindex{antiderivative})とよぶ。
 上式の左辺は次のように書くこともある。
-\begin{align}
-  \int dx f(x)\notag
-\end{align}
+\begin{align*}
+  \int dx f(x)
+\end{align*}
 
 
 \subsubsection{不定積分の幾何学的意味}
@@ -1045,9 +1046,9 @@ $F(x)$を$f(x)$の\bfindex[げんしかんすう]{原始関数}(\nmindex{antider
 ($\Delta x=x_{i+1}-x_i$)である。
 この分割数を無限個にした極限では$S_n$は真の面積$S$に近付くと考えられる。
 すなわち，
-\begin{align}
+\begin{align*}
   S=\lim_{n\to \infty}\sum_{i=0}^nf(x_i)\Delta x
-\end{align}
+\end{align*}
 ここで，$\displaystyle\lim_{n\to \infty}\sum_{i=0}^n$を$\displaystyle\int_a^b$,
 微小幅である$\Delta x$を$dx$と簡単化のためおき直すと，面積は次式のように書ける。
 \begin{align}
@@ -1062,10 +1063,8 @@ $F(x)$を$f(x)$の\bfindex[げんしかんすう]{原始関数}(\nmindex{antider
   た，ライプニッツによる記号である。}。
 そして，これを関数$f(x)$の\bfindex[ていせきぶん]{定積分}
 (\nmindex{definite integral})とよぶ。
-ただし，\textbf{$f(x)<0$となる領域の面積は負の値}で示す。
-
-% ある関数$y=f(x)$と$x=a$, $x=b$，そして$x$軸で囲まれた面積$S$を
-% 上式のように表し，
+ただし，$f(x)<0$となる領域においては，微小面積$dx\dot f(x)$も負となり ，それを足し合わせた総和も負となる 。
+すなわち，\textbf{$f(x)<0$となる領域の面積は負の値}で示す。
 
 
 \question
@@ -1117,6 +1116,22 @@ $F(x)$を$f(x)$の\bfindex[げんしかんすう]{原始関数}(\nmindex{antider
 %   $\displaystyle\int_0^{\pi/2} (\sin x -\frac{2}{\pi}x)dx$
 \item\label{iitem:int_0^asqrt(a^2-x^2)dx} $\displaystyle\int_0^a \sqrt{a^2-x^2}dx$
 \end{enumerate}
+
+\subsubsection{物体の運動と微積分}
+物体の位置を$x(t)$とおくと，その速度$v$は位置の微分，すなわち，$v=\frac{dx}{dt}$で与えられる。
+逆に, 速度$v(t)$から位置$x$を求めるにはその逆演算，すなわち以下の不定積分を求めれば良い。
+\begin{align*}
+x(t)=\int v(t)dt
+\end{align*}
+ここで，右辺を計算すれば積分定数が出てくる。その値は，例えば時刻$t=0$における位置$x(0)$(初期値)が与えられれば，一意に定めることができ，任意の時刻の位置を知ることができるようになる。
+しかし，初期値が分からなければ，謎の初期位置からどれだけ動いたか(変位)を速度情報から知ることはできるが，時刻$t$における位置は分からないことになる。
+
+時刻$t_1$ から時刻$t_2$までの速度情報をもとに，その間の変位$\Delta x$を求めるには，以下の定積分の値となる。
+\begin{align*}
+  \Delta x=\int_{t_1}^{t_2}v(t)dt
+\end{align*}
+定積分において，$v(t)<0$の時間区間は負の面積を与えることになるが，それはすなわち，$x(t)$の値が減少すること，言い換えると座標軸の負の向きに物体が進んでいることを意味する。
+つまり，負の面積を定義することによって，初めて速度から位置(変位)の正確な計算が可能になる。
 
 \subsubsection{定積分と偶関数・奇関数}
 \question 以下の問に答えなさい。
@@ -1373,12 +1388,12 @@ $\frac{1}{4}\{\frac{2}{x-2}+\log\left|\frac{x-4}{x-2}\right|\}+C$
 置き換えることで，積分可能な形に変形できるかを考える。
 
 ここでは，変数$x$と変数$t$の間に関係式$x=x(t)$が成り立つとする。
-この時，関数$F(x)$は以下のように$t$による式に書き直せる。
+この時，$x$の関数$F(x)$は以下のように$t$による式に書き直せる。
 \begin{align}
 \label{eq:F=F}
 F(x)=F(x(t))
 \end{align}
-ここで，$f=\frac{dF}{dx}$とおくと，次式が成り立つ。
+ここで，$\displaystyle f=\frac{dF}{dx}$とおくと，次式が成り立つ。
 \begin{align}
 	F(x)&=\int\frac{dF}{dx}dx\notag\\
 	&=\int fdx
@@ -1386,10 +1401,10 @@ F(x)=F(x(t))
 \end{align}
 また，
 \begin{align}
-F(x(t))&=\int\frac{dF(x(t))}{du}du\notag\\
+F(x(t))&=\int\frac{dF(x(t))}{dt}dt\notag\\
 	&=\int\frac{dF}{dx}\frac{dx}{dt}dt\notag\\
 	&=\int f\frac{dx}{dt}dt
-\label{eq:dF2}	
+\label{eq:dF2}
 \end{align}
 式(\ref{eq:dF1}), (\ref{eq:dF2})を式(\ref{eq:F=F})に代入すると次式を得る。
 \begin{align*}
