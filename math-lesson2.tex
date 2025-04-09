@@ -569,7 +569,7 @@ $f'(x_0)=g'(x_0)$
 \subsection{高次導関数}
 
 \nquestion
-以下の$n$次導関数を求めよ
+以下の$n$次導関数を求めなさい
 \answer{
 (\ref{Ditem:e^x}) $f^{(n)}(x)=e^x$\\
 (\ref{Ditem:sinx}) $f^{(n)}(x)=
@@ -590,8 +590,8 @@ $f'(x_0)=g'(x_0)$
 \item\label{Ditem:cosx} $f(x)=\cos x$
 \end{enumerate}
 \nquestion
-以下の関数をそれぞれ4階微分まで求め，それに基づいて，$n$階微分
-$f^{(n)}$を推測せよ
+以下の関数$f(x)$について，それぞれ4次導関数まで求め，それに基づいて$n$次導関数
+$f^{(n)(x)}$を推測しなさい
 \answer{
 (\ref{eq:fnOFx^k}) $
 f^{(n)}(x)=
@@ -818,7 +818,7 @@ Leonhard Euler\index{Euler, Leonhard},
 
 \subsubsection{オイラーの公式と複素数\label{sec:Euler-complex}}
 
-複素数$z=re^i{\theta}$, $(rは正の実数)$はオイラーの公式により次のように書くことができる。
+複素数$z=re^{i\theta}$, $(rは正の実数)$はオイラーの公式により次のように書くことができる。
 \begin{align*}
 %   \label{eq:complex}
   z&=re^{i\theta}\\
@@ -827,7 +827,7 @@ Leonhard Euler\index{Euler, Leonhard},
 
 \nquestion 以下の問いに答えなさい。
 \begin{enumerate}
-\item 複素数$z=re^i{\theta}$を$z=a+bi$の形に書き直したい。
+\item 複素数$z=re^{i\theta}$を$z=a+bi$の形に書き直したい。
 $a$, $b$を$|z|$, $\cos\theta$，$\sin\theta$で表しなさい。
 ただし，$\theta$は$z$の偏角($\theta=\arg z$)とする。
 
@@ -1027,58 +1027,18 @@ $F(x)$を$f(x)$の\bfindex[げんしかんすう]{原始関数}(\nmindex{antider
   \end{center}
 \end{figure}
 
-% 水たまりの表面積を求めたい時には、どのようにしたら良いだろう。
-% たとえば、正方形のタイルを水たまりと同じ形に敷き詰めて、
-% タイル一枚の面積とその枚数を掛けあわせれば、おおよその面積は求めること
-% が出来る。精度を高くしたければ、小さめのタイルを使えば良い。
-
 
 ある関数$y=f(x)$と$x=a$, $x=b$，そして$x$軸で囲まれた面積$S$を
-求める方法を考えてみよう。
-例えば，この区間を$n$個の区間に分割し、それぞれを長方形とみなして計算
-した面積の和$S_n$で近似的に計算することができる(図\ref{fig:SbySum})。
-すなわち，
+以下のように表す。
 \begin{align}
-  S_n&=f(x_0)\Delta x+f(x_1)\Delta x+\cdots+f(x_{n-1})\Delta x\notag\\
-  &=\sum_{i=0}^{n-1}f(x_i)\Delta x
-\end{align}
-ただし，$a=x_0$, $b=x_n$であり，$\Delta x$は分割した1区間の幅
-($\Delta x=x_{i+1}-x_i$)である。
-この分割数を無限個にした極限では$S_n$は真の面積$S$に近付くと考えられる。
-すなわち，
-\begin{align*}
-  S=\lim_{n\to \infty}\sum_{i=0}^nf(x_i)\Delta x
-\end{align*}
-ここで，$\displaystyle\lim_{n\to \infty}\sum_{i=0}^n$を$\displaystyle\int_a^b$,
-微小幅である$\Delta x$を$dx$と簡単化のためおき直すと，面積は次式のように書ける。
-\begin{align}
-\label{eq:integration}
+  \label{eq:integration}
   S=\int_a^bf(x)dx
 \end{align}
-以上をまとめると，上式は
-\textbf{底辺のある位置$x$での微小長さ$dx$およびその点での高さ$f(x)$の積で
-ある微小面積$dx\cdot f(x)$を，区間$x\in[a,b]$で足しあわせる}ことを意味して
-いる(図\ref{fig:integration})
-\footnote{$\int$はラテン語で和を表すsumma (英語のsummation)のSを変形し
-  た，ライプニッツによる記号である。}。
-そして，これを関数$f(x)$の\bfindex[ていせきぶん]{定積分}
-(\nmindex{definite integral})とよぶ。
-ただし，$f(x)<0$となる領域においては，微小面積$dx\dot f(x)$も負となり ，それを足し合わせた総和も負となる 。
-すなわち，\textbf{$f(x)<0$となる領域の面積は負の値}で示す。
 
-
-\question
-定積分の計算は不定積分の計算を用いて行うことができる。
-すなわちある関数$f(x)$の原始関数の1つを$F(x)$とおくと次式が成立する。
-\begin{align}
-  \int_a^bf(x)=F(b)-F(a)\notag
-\end{align}
-このことを証明しなさい。
 
 \nexercise
 上記の「定積分の定義」に従って，以下を求めなさい
 （すなわち，幾何学的に面積を求める）。
-また，その結果が積分計算による解と一致することを確認しなさい
 \answer{
 (\ref{iitem:int_0^1xdx})~$\frac{1}{2}$~
 (\ref{iitem:int_-1^1xdx})~$0$~
@@ -1097,6 +1057,55 @@ $F(x)$を$f(x)$の\bfindex[げんしかんすう]{原始関数}(\nmindex{antider
 \item\label{iitem:int_0^2pisinxdx} $\displaystyle\int_0^{2\pi} \sin x dx$
 \item\label{iitem:int_-1^1|x|dx} $\displaystyle\int_{-1}^1|x|dx$
 \end{enumerate}
+
+
+\subsection{定積分の計算}
+% 水たまりの表面積を求めたい時には、どのようにしたら良いだろう。
+% たとえば、正方形のタイルを水たまりと同じ形に敷き詰めて、
+% タイル一枚の面積とその枚数を掛けあわせれば、おおよその面積は求めること
+% が出来る。精度を高くしたければ、小さめのタイルを使えば良い。
+
+関数$y=f(x)$と$x=a$, $x=b$，そして$x$軸で囲まれた領域の面積が幾何学的に求められる場合は
+(\ref{eq:integration})式の値を求めるのは容易である。
+しかし$y=f(x)$が曲線の場合，この面積$S$を幾何学的に求めるのは一般に難しい。
+そこで，例えばこの領域を$n$個の区間に分割し、それぞれを長方形とみなして計算
+した面積の和$S_n$で近似的に計算することを考える(図\ref{fig:SbySum})。
+すなわち，
+\begin{align}
+  S_n&=f(x_0)\Delta x+f(x_1)\Delta x+\cdots+f(x_{n-1})\Delta x\notag\\
+  &=\sum_{i=0}^{n-1}f(x_i)\Delta x
+\end{align}
+ただし，$a=x_0$, $b=x_n$であり，$\Delta x$は分割した1区間の幅
+($\Delta x=x_{i+1}-x_i$)である。
+この分割数を無限個にした極限では$S_n$は真の面積$S$に近付くと考えられる。
+すなわち，
+\begin{align*}
+  S=\lim_{n\to \infty}\sum_{i=0}^nf(x_i)\Delta x
+\end{align*}
+ここで，$\displaystyle\lim_{n\to \infty}\sum_{i=0}^n$を$\displaystyle\int_a^b$,
+微小幅である$\Delta x$を$dx$と簡単化のためおき直すと，面積は次式のように書ける。
+\begin{align}
+\label{eq:integration2}
+  S=\int_a^bf(x)dx
+\end{align}
+以上をまとめると，上式は
+\textbf{底辺のある位置$x$での微小長さ$dx$およびその点での高さ$f(x)$の積で
+ある微小面積$dx\cdot f(x)$を，区間$x\in[a,b]$で足しあわせる}ことを意味して
+いる(図\ref{fig:integration})
+\footnote{$\int$はラテン語で和を表すsumma (英語のsummation)のSを変形し
+  た，ライプニッツによる記号である。}。
+そして，これを関数$f(x)$の\bfindex[ていせきぶん]{定積分}
+(\nmindex{definite integral})とよぶ。
+ただし，$f(x)<0$となる領域においては，微小面積$dx\dot f(x)$も負となり ，それを足し合わせた総和も負となる 。
+すなわち，\textbf{$f(x)<0$となる領域の面積は負の値}で示す。
+
+\question
+定積分の計算は不定積分の計算を用いて行うことができる。
+すなわちある関数$f(x)$の原始関数の1つを$F(x)$とおくと次式が成立する。
+\begin{align}
+  \int_a^bf(x)=F(b)-F(a)\notag
+\end{align}
+このことを証明しなさい。
 
 \nexercise
 以下はどのような図形の面積を表すかをグラフを書いて説明しなさい。
@@ -1759,8 +1768,8 @@ y&\le -x+1
 (\ref{item:S:circle}) (a) $\displaystyle 2\int_{-a}^a\sqrt{a^2-x^2}dx$~
 (b) $\displaystyle \int_0^{2\pi}\frac{1}{2}a\cdot ad\theta$~
 (c) $\displaystyle \int_0^a2\pi rdr$ ~
-(\ref{item:S:cylinder}) $\displaystyle\int_0^h2\pi rdh$~or
-$\displaystyle\int_0^{2\pi}hr d\theta$
+%(\ref{item:S:cylinder}) $\displaystyle\int_0^h2\pi rdh$~or
+%$\displaystyle\int_0^{2\pi}hr d\theta$
 (\ref{item:S:sphere})$\displaystyle\int_0^{\pi} 2\pi r\sin\theta
 \cdot rd\theta$
 }。
@@ -2229,15 +2238,6 @@ $\displaystyle\lim_{t\to\infty}V(t)$を求めても良い。
 \item 解の振舞を$a$, $b$の値によって分類し，図示して説明しなさい。
 \end{enumerate}
 
-\nquestion
-水平面上に質量を無視できるバネを置き，一端は壁に，もう一端には質量$m$の重りをつけた。その後，重りを少し引っ張ってから手を離し，重りの運動を観察した。
-　重りと床面の間には粘性摩擦(速度に比例する大きさの抵抗力)がはたらくが，静止摩擦や動摩擦は働かないものとする。バネ定数を$k$, 粘性摩擦係数を$\sigma$とする。
-\begin{enumerate}
-	\item 重りの運動方程式を書きなさい。
-	\item バネ定数や粘性摩擦係数が変化するとバネの運動がどのように変化しうるか説明しなさい。
-\end{enumerate}
-
-
 \exercise
 以下の微分方程式の解をそれぞれ求め，解軌道を図示しなさい。
 また，求めた解を微分方程式に代入することにより検算をしなさい
@@ -2267,6 +2267,14 @@ $\displaystyle\lim_{t\to\infty}V(t)$を求めても良い。
 %\item $\ddot{x}+4\dot{x}+5x=0$
 %\item $\ddot{x}+2\dot{x}+x=0$
 %\end{enumerate}
+
+\nquestion
+水平面上に質量を無視できるバネを置き，一端は壁に，もう一端には質量$m$の重りをつけた。その後，重りを少し引っ張ってから手を離し，重りの運動を観察した。
+　重りと床面の間には粘性摩擦(速度に比例する大きさの抵抗力)がはたらくが，静止摩擦や動摩擦は働かないものとする。バネ定数を$k$, 粘性摩擦係数を$\sigma$とする。
+\begin{enumerate}
+	\item 重りの運動方程式を書きなさい。
+	\item バネ定数や粘性摩擦係数が変化するとバネの運動がどのように変化しうるか説明しなさい。
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 \newpage

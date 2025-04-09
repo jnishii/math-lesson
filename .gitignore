@@ -1,5 +1,6 @@
 .DS_Store
 .texpadtmp
+out/
 *.aux
 *.bbl
 *.bcf
